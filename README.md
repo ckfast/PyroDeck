@@ -22,7 +22,7 @@ The **Nodes** have a 3 digit address which is how the Master Control identifies 
 - [ ] Develope the Node's MCU PCB Module
 - [ ] Finish Developement of the Node's code.
 
-###Master Control
+### Master Control
 - [ ] Literally Everything
 
 
