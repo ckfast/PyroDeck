@@ -19,7 +19,7 @@ The **Nodes** have a 3 digit address which is how the Master Control identifies 
 ### Node
 - [x] Develope the Node's Relay PCB Module
 - [x] Develope the Node's UI PCB Module 
-- [ ] Develope the Node's MCU PCB Module
+- [x] Develope the Node's MCU PCB Module
 - [ ] Finish Developement of the Node's code.
 
 ### Master Control
