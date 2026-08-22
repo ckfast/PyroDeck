@@ -1,6 +1,7 @@
 [submodule "master"]
-	path = master
+    path = master
+    url = https://github.com/ckfast/PyroDeck-Master-Main.git
+
+[submodule "node"]
+	path = node
 	url = https://github.com/ckfast/PyroDeck-Node-Main.git
-[submodule "master1"]
-	path = master1
-	url = https://github.com/ckfast/PyroDeck-Master-Main
