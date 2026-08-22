@@ -10,20 +10,25 @@ The **Master Control** panel does exactly what the name says. It tells the syste
 
 The **Master Control** panel has different opperating modes which include fully manual control over every channel, and automatic control that runs through a cue list to launch one or more fireworks at a time. It is also possible to have a "wait for input" cue to wait for a button to be pressed before carrying on with the cue list. I plan to include more features with both opperating modes as time comes.
 
+
 ### Nodes
 The **Nodes** are the "workmen" of the system. They are up close to the danger and send the signals to ignite the fireworks. They recieve the commands given by the Master Controller and follow what it says, whether it be to ignite a firework, or respond with the status of each port. 
 
-The **Nodes** have a 3 digit address which is how the Master Control identifies each node. With each command sent, there is a specific address in which the Node checks for. If the address matches it reads the command, if not it discards the message and watches for other commands. 
+The **Nodes** have a 3 digit address which is how the Master Controller identifies each node. With each command sent, there is a specific address in which the Node checks for. If the address matches it reads the command, if not it discards the message and watches for other commands. 
 
 # Todo List
 ### Node
 - [x] Develope the Node's Relay PCB Module
 - [x] Develope the Node's UI PCB Module 
 - [x] Develope the Node's MCU PCB Module
-- [ ] Finish Developement of the Node's code.
+- [x] Finish Developement of the Node's code.
 
 ### Master Control
-- [ ] Literally Everything
-
+- [x] Prototype 1
+  - [x] Hardware and wiring (proto PCBs, arduino mega, nextion, buttons)
+  - [ ] Firmware
+    - [x] Nextion UI 
+    - [x] Live Manual Mode
+    - [ ] Programmed Mode
 
 ![PyroDeck Icon](https://github.com/ckfast/PyroDeck/blob/8be9890bc0634977935303a31299fa7303ae7cae/images/PyroDeckLogoSmall.png)
