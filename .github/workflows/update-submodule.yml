@@ -1,0 +1,59 @@
+name: Update PyroDeck Submodule
+
+on:
+  repository_dispatch:
+    types:
+      - master-release
+      - node-release
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout PyroDeck
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Determine submodule
+        id: submodule
+        run: |
+          if [ "${{ github.event.action }}" = "master-release" ]; then
+            echo "path=master" >> "$GITHUB_OUTPUT"
+            echo "name=Master" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.action }}" = "node-release" ]; then
+            echo "path=node" >> "$GITHUB_OUTPUT"
+            echo "name=Node" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Update submodule
+        run: |
+          cd "${{ steps.submodule.outputs.path }}"
+
+          git fetch --tags
+
+          git checkout "${{ github.event.client_payload.tag }}"
+
+          cd ..
+
+          git add "${{ steps.submodule.outputs.path }}"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update ${{ steps.submodule.outputs.name }} to ${{ github.event.client_payload.tag }}"
+          title: "Update ${{ steps.submodule.outputs.name }} to ${{ github.event.client_payload.tag }}"
+          body: |
+            Automatically generated from the
+            `${{ steps.submodule.outputs.name }}` release.
+
+            Release: `${{ github.event.client_payload.tag }}`
+          branch: "update-${{ steps.submodule.outputs.path }}-${{ github.event.client_payload.tag }}"
+          delete-branch: true
