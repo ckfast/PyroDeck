@@ -1,4 +1,4 @@
-![PyroDeck Logo with Icon](https://github.com/ckfast/PyroDeck/blob/4ee63fe5b90d5df9740ecbb86bdcbd6d85212fa9/images/PyroDeckBanner.png)
+![PyroDeck Logo with Icon](docs/images/pyrodeckbanner.png)
 
 # What is PyroDeck?
 PyroDeck is an open source project with one goal in mind: Have a way to ignite fireworks safely from a distance, and in a way that is easy, fun, and of course, really cool. 
@@ -31,4 +31,4 @@ The **Nodes** have a 3 digit address which is how the Master Controller identifi
     - [x] Live Manual Mode
     - [ ] Programmed Mode
 
-![PyroDeck Icon](https://github.com/ckfast/PyroDeck/blob/8be9890bc0634977935303a31299fa7303ae7cae/images/PyroDeckLogoSmall.png)
+![PyroDeck Icon](docs/images/pyrodeckicondarksmall.png)
