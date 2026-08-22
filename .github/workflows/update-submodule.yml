@@ -23,6 +23,7 @@ jobs:
 
       - name: Determine submodule
         id: submodule
+        shell: bash
         run: |
           if [ "${{ github.event.action }}" = "master-release" ]; then
             echo "path=master" >> "$GITHUB_OUTPUT"
@@ -30,13 +31,16 @@ jobs:
           elif [ "${{ github.event.action }}" = "node-release" ]; then
             echo "path=node" >> "$GITHUB_OUTPUT"
             echo "name=Node" >> "$GITHUB_OUTPUT"
+          else
+            echo "Unknown event: ${{ github.event.action }}"
+            exit 1
           fi
 
       - name: Update submodule
         run: |
           cd "${{ steps.submodule.outputs.path }}"
 
-          git fetch --tags
+          git fetch --tags origin
 
           git checkout "${{ github.event.client_payload.tag }}"
 
