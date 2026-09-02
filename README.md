@@ -10,11 +10,15 @@ The **Master Control** panel does exactly what the name says. It tells the syste
 
 The **Master Control** panel has different opperating modes which include fully manual control over every channel, and automatic control that runs through a cue list to launch one or more fireworks at a time. It is also possible to have a "wait for input" cue to wait for a button to be pressed before carrying on with the cue list. I plan to include more features with both opperating modes as time comes.
 
+![PyroDeck Master Photo](docs/images/PyroDeck-MasterPhoto.JPEG)
+
 
 ### Nodes
 The **Nodes** are the "workmen" of the system. They are up close to the danger and send the signals to ignite the fireworks. They recieve the commands given by the Master Controller and follow what it says, whether it be to ignite a firework, or respond with the status of each port. 
 
 The **Nodes** have a 3 digit address which is how the Master Controller identifies each node. With each command sent, there is a specific address in which the Node checks for. If the address matches it reads the command, if not it discards the message and watches for other commands. 
+
+![PyroDeck Node Photo](docs/images/PyroDeck-NodePhoto.jpeg)
 
 # Todo List
 ### Node
