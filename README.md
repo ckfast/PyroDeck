@@ -22,9 +22,10 @@ The **Nodes** have a 3 digit address which is how the Master Controller identifi
 
 # Todo List
 ### Node
-- [x] Develope the Node's Relay PCB Module
-- [x] Develope the Node's UI PCB Module 
-- [x] Develope the Node's MCU PCB Module
+- [x] Develop the Node's Relay PCB Module
+- [x] Develop the Node's UI PCB Module 
+- [x] Develop the Node's MCU PCB Module
+- [ ] Develop the Node's Battery/Power PCB Module (In Prototype)
 - [x] Finish Developement of the Node's code.
 
 ### Master Control
